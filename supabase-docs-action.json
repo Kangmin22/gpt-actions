@@ -1,0 +1,36 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Supabase 문서 불러오기",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://mihvgecxvywylkdpbduy.supabase.co"
+    }
+  ],
+  "paths": {
+    "/rest/v1/protected_docs": {
+      "get": {
+        "operationId": "getProtectedDocByTitle",
+        "summary": "제목으로 문서를 조회하고 보호 선언을 확인합니다",
+        "parameters": [
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "조회할 문서의 제목"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "성공적으로 문서를 반환합니다"
+          }
+        }
+      }
+    }
+  }
+}
